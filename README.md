@@ -27,10 +27,17 @@ Each database runs independently in its own container using **Docker Compose**.
 * [Docker](https://www.docker.com/)
 * [Docker Compose](https://docs.docker.com/compose/)
 
+## 🧠 MongoDB Connection URI
+
+Use the following URI to connect your application to the MongoDB instance running inside Docker:
+
+```js
+const mongoURI = 'mongodb://root:example@localhost:27017/local?authSource=admin';
+// Connect to MongoDB running in Docker on localhost
+```
+
 ## ✅ Benefits
 
 * 🔧 No configuration needed — works out of the box
 * 🐳 Clean Docker-based setup
 * 🧪 Perfect for local development, testing, and learning
-
----
