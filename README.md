@@ -16,9 +16,9 @@ chmod +x run.sh
 
 The `run.sh` script spins up three separate containers:
 
+* ✅ **DynamoDB** (`dynamo-db.yaml`)
 * ✅ **MongoDB** (`mongo-db.yaml`)
 * ✅ **MySQL** (`mysql-db.yaml`)
-* ✅ **DynamoDB** (`dynamo-db.yaml`)
 
 Each database runs independently in its own container using **Docker Compose**.
 
@@ -26,6 +26,18 @@ Each database runs independently in its own container using **Docker Compose**.
 
 * [Docker](https://www.docker.com/)
 * [Docker Compose](https://docs.docker.com/compose/)
+
+## 🧠 DynamoDB Connection URI
+
+Use the following URI to connect your application to the DynamoDB instance running inside Docker:
+
+```yaml
+dynamodb:
+  endpoint: http://localhost:8000
+  region: us-west-2
+  id: local
+  password: local
+```
 
 ## 🧠 MongoDB Connection URI
 
