@@ -1,7 +1,7 @@
 # 🚀 Instant Multi-Database Setup With UI Using Docker
 
 No need to download or configure databases manually.
-This project launches **MongoDB**, **MySQL**, and **DynamoDB** containers in just one command.
+This project launches **MongoDB**, **MySQL**, **Microsoft SQL Server**, and **DynamoDB** containers in just one command.
 
 ## 🧭 Quick Start
 
@@ -14,11 +14,12 @@ chmod +x run.sh
 
 ## 🐳 What This Does
 
-The `run.sh` script spins up three separate containers:
+The `run.sh` script spins up these separate containers:
 
 * ✅ **DynamoDB** (`dynamo-db.yaml`)
 * ✅ **MongoDB** (`mongo-db.yaml`)
 * ✅ **MySQL** (`mysql-db.yaml`)
+* ✅ **Microsoft SQL Server** (`ms-sql-server.yaml`)
 
 Each database runs independently in its own container using **Docker Compose**.
 
@@ -46,6 +47,15 @@ Use the following URI to connect your application to the MongoDB instance runnin
 ```js
 const mongoURI = 'mongodb://root:example@localhost:27017/local?authSource=admin';
 // Connect to MongoDB running in Docker on localhost
+```
+
+## 🧠 Microsoft SQL Server
+
+```yaml
+System: MS SQL
+Server: microsoft_sql_server
+Username: SA
+Password: YourStrong!Passw0rd
 ```
 
 ## ✅ Benefits
